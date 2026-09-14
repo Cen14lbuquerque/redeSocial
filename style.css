@@ -70,6 +70,7 @@ body {
   width: 100%;
   aspect-ratio: 4 / 5;
   background-color: #eee;
+  cursor: pointer;
 }
 
 .post-media img.main-img {
@@ -133,10 +134,11 @@ body {
   gap: 5px;
   font-size: 13px;
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   background: none;
   border: none;
+  transition: transform 0.1s ease;
 }
 
 .action-btn svg {
@@ -147,21 +149,34 @@ body {
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: transform 0.15s ease, fill 0.2s ease, stroke 0.2s ease;
+}
+
+/* Estado Ativo da Curtida */
+.action-btn.liked svg {
+  fill: #e0245e;
+  stroke: #e0245e;
+}
+
+/* Estado Ativo do Salvar */
+.action-btn.bookmarked svg {
+  fill: #000000;
+  stroke: #000000;
 }
 
 /* Texto de Curtidas */
 .post-details {
   padding: 0 16px 12px 16px;
   font-size: 13px;
-  color: #e0e5ec;
+  color: #111111;
 }
 
 .likes {
-  color: #e8ebef;
+  color: #111111;
 }
 
 .likes strong {
-  color: #e9eef6;
+  color: #000000;
 }
 
 /* Barra de Navegação Inferior */
@@ -186,4 +201,3 @@ body {
   stroke: currentColor;
   stroke-width: 2;
 }
-
